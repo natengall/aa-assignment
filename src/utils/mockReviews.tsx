@@ -1,0 +1,240 @@
+type ReviewTag = "Bad Service" | "Unexpected" | "Great" | "Excellent" | "Best Service";
+type ReviewStatus = "all" | "published" | "deleted";
+
+const tagSets: ReviewTag[][] = [
+    ["Excellent", "Great", "Best Service"],
+    ["Best Service", "Excellent"],
+    ["Unexpected", "Great"],
+    ["Bad Service", "Unexpected"],
+    ["Bad Service"],
+];
+
+export interface Review {
+    id: number;
+    name: string;
+    joinDate: string;
+    message: string;
+    rating: number;
+    avatar: string;
+    tags: ReviewTag[];
+    status: ReviewStatus
+}
+
+function getRandomTags(): ReviewTag[] {
+    return tagSets[Math.floor(Math.random() * tagSets.length)];
+}
+
+export const reviews: Review[] = [
+    {
+        id: 1234,
+        name: 'James Sullivan',
+        joinDate: '2023-01-10',
+        message: 'Friendly service. Josh, Lunar and everyone at Just Property in Hastings deserved a big Thank You from us for moving us from Jakarta to Medan during the lockdown.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=1',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1235,
+        name: 'Deborah Saragi',
+        joinDate: '2023-02-15',
+        message: 'Dealing with Syamsudin and Bakri was a joy. I got in touch with Just Property after seeing a couple of properties that caught my eye. Both Syamsudin and Bakri strive to deliver a professional service and surpassed my expectations - they were not only helpful, but they were super kind too.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=2',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1236,
+        name: 'David Here',
+        joinDate: '2023-04-25',
+        message: 'I viewed a number of properties with Just Property and found them to be professional, efficient, patient, courteous and helpful every time.',
+        rating: 4,
+        avatar: 'https://i.pravatar.cc/150?img=4',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1237,
+        name: 'Angela Moss',
+        joinDate: '2023-05-30',
+        message: 'I used Just Property for the sale of my late mother\'s property. From the off they were very confident and enthusiastic about finding a buyer, and I wasn\'t disappointed - within a very short time of marketing the house they told me they had a buyer.',
+        rating: 2,
+        avatar: 'https://i.pravatar.cc/150?img=5',
+        tags: getRandomTags(),
+        status: 'deleted',
+    },
+    {
+        id: 1238,
+        name: 'Jean Munaroh',
+        joinDate: '2023-05-30',
+        message: 'I viewed a number of properties with Just Property and found them to be professional, efficient, patient, courteous and helpful every time.',
+        rating: 4,
+        avatar: 'https://i.pravatar.cc/150?img=6',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1239,
+        name: 'Michael Tan',
+        joinDate: '2023-06-12',
+        message: 'The whole process was smooth and transparent. From viewing the property to completing the paperwork, the team handled everything with care and precision.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=7',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1240,
+        name: 'Sofia Wijaya',
+        joinDate: '2023-07-01',
+        message: 'Communication was excellent throughout. Even small concerns were addressed immediately, making me feel valued as a client.',
+        rating: 4,
+        avatar: 'https://i.pravatar.cc/150?img=8',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1241,
+        name: 'Robert Lim',
+        joinDate: '2023-07-15',
+        message: 'They went above and beyond to ensure the deal went through despite some unexpected challenges. Highly recommended!',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=9',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1242,
+        name: 'Karen Lopez',
+        joinDate: '2023-08-05',
+        message: 'While the team was friendly, the process took longer than expected, and I had to follow up several times.',
+        rating: 3,
+        avatar: 'https://i.pravatar.cc/150?img=10',
+        tags: getRandomTags(),
+        status: 'deleted',
+    },
+    {
+        id: 1243,
+        name: 'Ahmad Fauzi',
+        joinDate: '2023-08-20',
+        message: 'This is my second time working with Just Property, and they have consistently delivered great service.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=11',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1244,
+        name: 'Melissa Chan',
+        joinDate: '2023-09-01',
+        message: 'I had a pleasant experience overall, but I think the property photos could have been more detailed.',
+        rating: 4,
+        avatar: 'https://i.pravatar.cc/150?img=12',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1245,
+        name: 'Samuel Lee',
+        joinDate: '2023-09-10',
+        message: 'Quick response and very professional. Would use their service again.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=13',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1246,
+        name: 'Linda Park',
+        joinDate: '2023-09-15',
+        message: 'The team was helpful but the process was a bit slow.',
+        rating: 3,
+        avatar: 'https://i.pravatar.cc/150?img=14',
+        tags: getRandomTags(),
+        status: 'deleted',
+    },
+    {
+        id: 1247,
+        name: 'Tommy Gunawan',
+        joinDate: '2023-09-20',
+        message: 'Very satisfied with the service. Highly recommended!',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=15',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1248,
+        name: 'Jessica Lim',
+        joinDate: '2023-09-25',
+        message: 'Good communication and friendly staff.',
+        rating: 4,
+        avatar: 'https://i.pravatar.cc/150?img=16',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1249,
+        name: 'Peter Wong',
+        joinDate: '2023-10-01',
+        message: 'Had some issues with paperwork but overall a decent experience.',
+        rating: 3,
+        avatar: 'https://i.pravatar.cc/150?img=17',
+        tags: getRandomTags(),
+        status: 'deleted',
+    },
+    {
+        id: 1250,
+        name: 'Emily Tan',
+        joinDate: '2023-10-05',
+        message: 'Efficient and reliable service.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=18',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1251,
+        name: 'Brian Chua',
+        joinDate: '2023-10-10',
+        message: 'The team was knowledgeable and supportive.',
+        rating: 4,
+        avatar: 'https://i.pravatar.cc/150?img=19',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1252,
+        name: 'Siti Rahman',
+        joinDate: '2023-10-15',
+        message: 'Not happy with the service. Delays and poor communication.',
+        rating: 2,
+        avatar: 'https://i.pravatar.cc/150?img=20',
+        tags: getRandomTags(),
+        status: 'deleted',
+    },
+    {
+        id: 1253,
+        name: 'Kevin Lau',
+        joinDate: '2023-10-20',
+        message: 'Smooth transaction and friendly staff.',
+        rating: 5,
+        avatar: 'https://i.pravatar.cc/150?img=21',
+        tags: getRandomTags(),
+        status: 'published',
+    },
+    {
+        id: 1254,
+        name: 'Nina Putri',
+        joinDate: '2023-10-25',
+        message: 'Service was okay, but could be improved.',
+        rating: 3,
+        avatar: 'https://i.pravatar.cc/150?img=22',
+        tags: getRandomTags(),
+        status: 'published',
+    }
+];
+
+export { };
