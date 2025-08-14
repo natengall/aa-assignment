@@ -287,8 +287,8 @@ export default function Reviews() {
                >
                   <div className="flex justify-between items-start gap-6">
                      {/* Left: Avatar & User Info */}
-                     <div className="flex items-start gap-4" style={{ width: "20%" }}>
-                        <div className="w-[60px] overflow-hidden bg-gray-100 rounded-2xl">
+                     <div className="flex items-start gap-4" style={{ width: "23%" }}>
+                        <div className="w-20 overflow-hidden bg-gray-100 rounded-2xl">
                            <img src={r.avatar} alt={r.name} className="h-full w-full object-cover rounded-2xl" />
                         </div>
                         <div className="space-y-1 w-full">
@@ -305,7 +305,7 @@ export default function Reviews() {
 
                      {/* Middle: Message & Tags */}
                      <div
-                        className="flex flex-col justify-between h-full min-h-[90px] ml-[-60px]"
+                        className="flex flex-col justify-between h-full min-h-[90px]"
                         style={{ width: "60%" }}
                      >
                         <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -327,7 +327,7 @@ export default function Reviews() {
                      </div>
 
                      {/* Right: Rating & Actions */}
-                     <div className="flex flex-col items-end gap-4" style={{ width: "20%" }}>
+                     <div className="flex flex-col items-end gap-4" style={{ width: "17%" }}>
                         <div className="flex items-center gap-2">
                            <div className="text-sm font-bold text-gray-900 dark:text-white/90">{r.rating.toFixed(1)}</div>
                            <Stars value={r.rating} />
